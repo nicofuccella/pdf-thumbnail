@@ -16,7 +16,7 @@
 
 Pdf-thumbnail creates an image of the first page of a pdf file. You can also manipulate the image:
   
-  * You can resize it in order to create a thumbnail
+  * You can resize it
   * You can compress it with less quality or in another type (default jpg)
   * You can crop it
   
