@@ -28,8 +28,8 @@ pdf-thumbnail is a Promise:
 const thumbnail = require('pdf-thumbnail');
 const pdfBuffer = require('./some/path/example.pdf');
 
-thumbnail(pdfBuffer /*Buffer of stream of the pdf*/)
-  .then(data /*Buffer or the image*/ => {
+thumbnail(pdfBuffer /*Buffer or stream of the pdf*/)
+  .then(data /*Buffer of the image*/ => {
     // do your stuffs...
   })
   .catch(err => console.log(err))
