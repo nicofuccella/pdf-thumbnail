@@ -14,7 +14,7 @@
 
 ## What is pdf-thumbnail?
 
-Pdf-thumbnail creates a image of the first page of a pdf file. You can also manipulate the image:
+Pdf-thumbnail creates an image of the first page of a pdf file. You can also manipulate the image:
   
   * You can resize it in order to create a thumbnail
   * You can compress it with less quality or in another type (default jpg)
