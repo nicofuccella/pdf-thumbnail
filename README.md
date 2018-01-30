@@ -29,7 +29,7 @@ const thumbnail = require('pdf-thumbnail');
 const pdfBuffer = require('./some/path/example.pdf');
 
 thumbnail(pdfBuffer /*Buffer of stream of the pdf*/)
-  .then(data /*Buffer of the image*/ => {
+  .then(data /*Buffer or the image*/ => {
     // do your stuffs...
   })
   .catch(err => console.log(err))
