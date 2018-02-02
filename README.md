@@ -17,7 +17,7 @@
 Pdf-thumbnail creates an image of the first page of a pdf file. You can also manipulate the image:
   
   * You can resize it
-  * You can compress it with less quality or in another type (default jpg)
+  * You can compress it with less quality or with another type (default jpg)
   * You can crop it
   
 ## How to use it
@@ -26,7 +26,7 @@ pdf-thumbnail is a Promise:
 
 ```javascript
 const thumbnail = require('pdf-thumbnail');
-const pdfBuffer = require('./some/path/example.pdf');
+const pdfBuffer = require('fs').readFileSync('/some/path/example.pdf');
 
 thumbnail(pdfBuffer /*Buffer or stream of the pdf*/)
   .then(data /*Buffer of the image*/ => {
@@ -42,23 +42,23 @@ You can pass also an object, where you can put all the operation that you want t
 EX. 
 
 ```javascript
-  const thumbnail = require('pdf-thumbnail');
-  const pdfBuffer = require('./some/path/example.pdf');
+const thumbnail = require('pdf-thumbnail');
+const pdfBuffer = require('fs').readFileSync('/some/path/example.pdf');
   
-  thumbnail(pdfBuffer /*Buffer of stream of the pdf*/, options /*{
-    resize: {
-      width: 344,
-      height: 300 
-    },
-    compress: {
-      type: 'JPEG',
-      quality: 75
-    }
-  }*/)
-    .then(data /*Buffer of the image*/ => {
-      // do your stuffs...
-    })
-    .catch(err => console.log(err))
+thumbnail(pdfBuffer /*Buffer or stream of the pdf*/, options /*{
+  resize: {
+    width: 344,
+    height: 300 
+  },
+  compress: {
+    type: 'JPEG',
+    quality: 75
+  }
+}*/)
+  .then(data /*Buffer of the image*/ => {
+    // do your stuffs...
+  })
+  .catch(err => console.log(err))
 ```
 
 ### Compress
@@ -79,7 +79,7 @@ EX.
 
 ### Resize
 
-    crop: {
+    resize: {
       width: 200,   default value
       height: 200   default value
     }
