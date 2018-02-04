@@ -4,7 +4,7 @@ const fs = require('fs');
 const pdf = require('./index');
 
 //with buffer
-pdf(fs.readFileSync('./pippo.pdf'), {
+pdf(fs.readFileSync('./pdf/pippo.pdf'), {
   compress: {
     type:'JPEG',
     quality: 70

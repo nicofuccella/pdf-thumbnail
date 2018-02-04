@@ -4,7 +4,7 @@ const fs = require('fs');
 const pdf = require('../index');
 
 //with buffer
-pdf(fs.readFileSync('./pippo.pdf'), {
+pdf(fs.readFileSync('./pdf/pippo.pdf'), {
   crop: {
     width: 200,
     height: 200,
