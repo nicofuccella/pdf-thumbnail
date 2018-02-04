@@ -12,11 +12,11 @@ pdf(fs.readFileSync('./pdf/pippo.pdf'), {
     y: 0
   }
 })
-  .then(data /*is a buffer*/ => fs.writeFileSync('./test/preview.jpg', data))
+  .then(data /*is a buffer*/ => fs.writeFileSync('./test/previewBuffer.jpg', data))
   .catch(err => console.error(err));
 
 //with stream
-pdf(fs.createReadStream('./pippo.pdf'), {
+pdf(fs.createReadStream('./pdf/pippo.pdf'), {
   crop: {
     width: 200,
     height: 200,
@@ -24,5 +24,5 @@ pdf(fs.createReadStream('./pippo.pdf'), {
     y: 0
   }
 })
-  .then(data /*is a buffer*/ => fs.writeFileSync('./test/preview.jpg', data))
+  .then(data /*is a buffer*/ => fs.writeFileSync('./test/previewStream.jpg', data))
   .catch(err => console.error(err));
