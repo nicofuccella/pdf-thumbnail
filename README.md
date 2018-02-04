@@ -17,7 +17,7 @@
 Pdf-thumbnail creates an image of the first page of a pdf file. You can also manipulate the image:
   
   * You can resize it
-  * You can compress it with less quality or with another type (default jpg)
+  * You can compress it with less quality
   * You can crop it
   
 ## How to use it
@@ -25,10 +25,10 @@ Pdf-thumbnail creates an image of the first page of a pdf file. You can also man
 pdf-thumbnail is a Promise:
 
 ```javascript
-const thumbnail = require('pdf-thumbnail');
+const pdf = require('pdf-thumbnail');
 const pdfBuffer = require('fs').readFileSync('/some/path/example.pdf');
 
-thumbnail(pdfBuffer /*Buffer or stream of the pdf*/)
+pdf(pdfBuffer /*Buffer or stream of the pdf*/)
   .then(data /*Buffer of the image*/ => {
     // do your stuffs...
   })
@@ -42,18 +42,11 @@ You can pass also an object, where you can put all the operation that you want t
 EX. 
 
 ```javascript
-const thumbnail = require('pdf-thumbnail');
+const pdf = require('pdf-thumbnail');
 const pdfBuffer = require('fs').readFileSync('/some/path/example.pdf');
   
-thumbnail(pdfBuffer /*Buffer or stream of the pdf*/, options /*{
-  resize: {
-    width: 344,
-    height: 300 
-  },
-  compress: {
-    type: 'JPEG',
-    quality: 75
-  }
+pdf(pdfBuffer /*Buffer or stream of the pdf*/, options /*{
+  operations...
 }*/)
   .then(data /*Buffer of the image*/ => {
     // do your stuffs...
@@ -61,28 +54,73 @@ thumbnail(pdfBuffer /*Buffer or stream of the pdf*/, options /*{
   .catch(err => console.log(err))
 ```
 
-### Compress
+### Options
 
-    compress: {
-      type: 'JPEG', default value
-      quality: 75   default value
-    }
+Is an object where you can put the operation you would like to do. The current operations available are:
 
-### Crop
+* Compress
+* Crop
+* Resize
 
-    crop: {
-      width: 200,
-      height: 200,
-      x: 0,
-      y: 0
-    }
+#### Compress
 
-### Resize
+```javascript
+const pdf = require('pdf-thumbnail');
+const pdfBuffer = require('fs').readFileSync('/some/path/example.pdf');
+  
+pdf(pdfBuffer /*Buffer or stream of the pdf*/, {
+  compress: {
+    type: 'JPEG',  //default
+    quality: 70    //default
+  }
+})
+  .then(data /*Buffer of the image*/ => {
+    // do your stuffs...
+  })
+  .catch(err => console.log(err))
+```
 
-    resize: {
-      width: 200,   default value
-      height: 200   default value
-    }
+#### Crop
+
+```javascript
+const pdf = require('pdf-thumbnail');
+const pdfBuffer = require('fs').readFileSync('/some/path/example.pdf');
+
+pdf(pdfBuffer /*Buffer or stream of the pdf*/, {
+  crop: {
+    width: 200,
+    height: 400,
+    x: 0,
+    y: 0
+  }
+})
+  .then(data /*Buffer of the image*/ => {
+     // do your stuffs...
+  })
+  .catch(err => console.log(err))
+```
+
+#### Resize
+
+```javascript
+const pdf = require('pdf-thumbnail');
+const pdfBuffer = require('fs').readFileSync('/some/path/example.pdf');
+
+pdf(pdfBuffer /*Buffer or stream of the pdf*/, {
+  resize: {
+    width: 200,   //default
+    height: 200,  //default
+  }
+})
+  .then(data /*Buffer of the image*/ => {
+    // do your stuffs...
+  })
+  .catch(err => console.log(err))
+```
+
+## Example
+
+See a few examples [here](test/)
 
 ## People
 
