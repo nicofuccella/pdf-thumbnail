@@ -4,7 +4,7 @@ const fs = require('fs');
 const pdf = require('../index');
 
 //with buffer
-pdf(fs.readFileSync('./pdf/pippo.pdf'), {
+pdf(fs.readFileSync('./pdf/test.pdf'), {
   resize: {
     width: 200,
     height: 200
@@ -14,7 +14,7 @@ pdf(fs.readFileSync('./pdf/pippo.pdf'), {
   .catch(err => console.error(err));
 
 //with stream
-pdf(fs.createReadStream('./pdf/pippo.pdf'), {
+pdf(fs.createReadStream('./pdf/test.pdf'), {
   resize: {
     width: 200,
     height: 200
