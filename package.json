@@ -1,7 +1,7 @@
 {
   "name": "pdf-thumbnail",
   "version": "0.0.1",
-  "description": "",
+  "description": "pdf-thumbnail creates a thumbnail of the first page of a pdf file",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
