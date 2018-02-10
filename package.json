@@ -1,6 +1,6 @@
 {
   "name": "pdf-thumbnail",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "pdf-thumbnail creates a thumbnail of the first page of a pdf file",
   "main": "index.js",
   "scripts": {
@@ -10,7 +10,17 @@
     "type": "git",
     "url": "git+https://github.com/nicoFuccella/pdf-thumbnail.git"
   },
-  "author": "",
+  "author": "Nicolò Fuccella",
+  "contributors": [
+    {
+      "name": "Nicolò Fuccella",
+      "email": "nico.fuccella@gmail.com"
+    },
+    {
+      "name": "Nicola Guerra",
+      "email": "nicola.ng2k@gmail.com"
+    }
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/nicoFuccella/pdf-thumbnail/issues"
