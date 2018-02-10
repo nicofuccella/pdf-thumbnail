@@ -12,6 +12,18 @@
 
     $ npm i pdf-thumbnail
 
+## Getting started
+
+This module works with gm, so you have to install imagemagick on your pc.
+
+On Mac OS X:
+
+    $ brew install imagemagick
+
+On Linux: 
+
+    $ sudo apt-get install imagemagick
+
 ## What is pdf-thumbnail?
 
 pdf-thumbnail creates a thumbnail of the first page of a pdf file. You can also manipulate the image:
