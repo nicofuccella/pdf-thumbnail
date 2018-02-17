@@ -10,7 +10,7 @@ pdf(fs.readFileSync('./pdf/test.pdf'), {
     quality: 70
   }
 })
-  .then(data /*is a buffer*/ => fs.writeFileSync('./previewBuffer.jpg', data))
+  .then(data /*is a buffer*/ => data.pipe(fs.createWriteStream('./previewBuffer.jpg')))
   .catch(err => console.error(err));
 
 //with stream
@@ -20,5 +20,5 @@ pdf(fs.createReadStream('./pdf/test.pdf'), {
     quality: 70
   }
 })
-  .then(data /*is a buffer*/ => fs.writeFileSync('./previewStream.jpg', data))
+  .then(data /*is a buffer*/ => data.pipe(fs.createWriteStream('./previewStream.jpg')))
   .catch(err => console.error(err));

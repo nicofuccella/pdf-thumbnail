@@ -44,7 +44,7 @@ pdf(
   pdfBuffer, /*Buffer or stream of the pdf*/
   options
 )
-  .then(data /*Buffer of the image*/ => {
+  .then(data /*Stream of the image*/ => {
     // ...
   })
   .catch(err => console.log(err))
