@@ -1,6 +1,6 @@
 {
   "name": "pdf-thumbnail",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "pdf-thumbnail creates a thumbnail of the first page of a pdf file",
   "main": "index.js",
   "scripts": {
