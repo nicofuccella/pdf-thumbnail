@@ -20,18 +20,18 @@ On Mac OS X:
 
     $ brew install imagemagick
 
-On Linux: 
+On Linux:
 
     $ sudo apt-get install imagemagick
 
 ## What is pdf-thumbnail?
 
 pdf-thumbnail creates a thumbnail of the first page of a pdf file. You can also manipulate the image:
-  
+
   * You can resize it
   * You can compress it with less quality
   * You can crop it
-  
+
 ## How to use it
 
 pdf-thumbnail returns a Promise:
@@ -63,7 +63,7 @@ An object where you can put the operations you would like to do on the thumbnail
 ```javascript
 const pdf = require('pdf-thumbnail');
 const pdfBuffer = require('fs').readFileSync('/some/path/example.pdf');
-  
+
 pdf(pdfBuffer, {
   compress: {
     type: 'JPEG',  //default
@@ -95,6 +95,16 @@ pdf(pdfBuffer, {
   })
   .catch(err => console.log(err))
 ```
+
+If you want to crop the image without keep the aspect ratio, yuo have to add another key to the object:
+
+    crop: {
+      width: 200,
+      height: 400,
+      x: 0,
+      y: 0,
+      aspectRatio: false  //default true
+     }
 
 #### Resize
 

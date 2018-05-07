@@ -8,8 +8,9 @@ pdf(fs.readFileSync('./pdf/test.pdf'), {
   crop: {
     width: 200,
     height: 200,
-    x: 0,
-    y: 0
+    x: 10,
+    y: 10,
+    aspectRatio: false
   }
 })
   .then(data /*is a buffer*/ => data.pipe(fs.createWriteStream('./previewBuffer.jpg')))
@@ -18,8 +19,8 @@ pdf(fs.readFileSync('./pdf/test.pdf'), {
 //with stream
 pdf(fs.createReadStream('./pdf/test.pdf'), {
   crop: {
-    width: 200,
-    height: 200,
+    width: 600,
+    height: 400,
     x: 0,
     y: 0
   }
