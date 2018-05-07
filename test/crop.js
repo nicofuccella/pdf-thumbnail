@@ -3,7 +3,7 @@
 const fs = require('fs');
 const pdf = require('../index');
 
-//with buffer
+//with buffer, without aspect ratio
 pdf(fs.readFileSync('./pdf/test.pdf'), {
   crop: {
     width: 200,
@@ -16,13 +16,13 @@ pdf(fs.readFileSync('./pdf/test.pdf'), {
   .then(data /*is a buffer*/ => data.pipe(fs.createWriteStream('./previewBuffer.jpg')))
   .catch(err => console.error(err));
 
-//with stream
+//with stream, with aspect ratio
 pdf(fs.createReadStream('./pdf/test.pdf'), {
   crop: {
     width: 600,
     height: 400,
     x: 0,
-    y: 0
+    y: 0,
   }
 })
   .then(data /*is a buffer*/ => data.pipe(fs.createWriteStream('./previewStream.jpg')))
