@@ -96,14 +96,14 @@ pdf(pdfBuffer, {
   .catch(err => console.log(err))
 ```
 
-If you want to crop the image without keep the aspect ratio, yuo have to add another key to the object:
+If you want to crop the image keeping the aspect ratio, yuo have to add another key to the object:
 
     crop: {
       width: 200,
       height: 400,
       x: 0,
       y: 0,
-      aspectRatio: false  //default true
+      ratio: true  //default true
      }
 
 #### Resize
