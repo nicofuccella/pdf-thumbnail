@@ -1,5 +1,3 @@
-'use strict';
+const preview = require("./lib/generatePreview")
 
-const preview = require('./lib/generatePreview');
-
-module.exports = preview;
+module.exports = preview

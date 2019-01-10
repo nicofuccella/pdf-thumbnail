@@ -1,6 +1,6 @@
 {
   "name": "pdf-thumbnail",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "pdf-thumbnail creates a thumbnail of the first page of a pdf file",
   "main": "index.js",
   "scripts": {
@@ -27,7 +27,8 @@
   },
   "homepage": "https://github.com/nicoFuccella/pdf-thumbnail#readme",
   "devDependencies": {
-    "eslint": "^4.14.0"
+    "@soluzioni-futura/eslint-config-soluzioni-futura": "^1.0.1",
+    "eslint": "^5.12.0"
   },
   "dependencies": {
     "gm": "^1.23.1",
