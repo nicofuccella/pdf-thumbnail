@@ -14,15 +14,17 @@
 
 ## Getting started
 
-This module works with gm, so you have to install imagemagick on your pc.
+This module works with gm, so you have to install imagemagick and ghostscript on your pc.
 
 On Mac OS X:
 
     $ brew install imagemagick
+    $ brew install ghostscript
 
 On Linux:
 
     $ sudo apt-get install imagemagick
+    $ sudo apt-get install ghostscript
 
 ## What is pdf-thumbnail?
 

@@ -1,10 +1,8 @@
-'use strict';
-
-const fs = require('fs');
-const pdf = require('../index');
+const fs = require("fs")
+const pdf = require("../index")
 
 //with buffer, with aspect ratio
-pdf(fs.readFileSync('./pdf/test.pdf'), {
+pdf(fs.readFileSync("./pdf/test.pdf"), {
   crop: {
     width: 100,
     height: 100,
@@ -13,5 +11,5 @@ pdf(fs.readFileSync('./pdf/test.pdf'), {
     ratio: true
   }
 })
-  .then(data /*is a buffer*/ => data.pipe(fs.createWriteStream('./previewBuffer.jpg')))
-  .catch(err => console.error(err));
+  .then(data /*is a buffer*/ => data.pipe(fs.createWriteStream("./previewBuffer.jpg")))
+  .catch(err => console.error(err))
