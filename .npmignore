@@ -4,3 +4,4 @@ test
 .eslintrc
 .gitignore
 .idea
+.DS_Store

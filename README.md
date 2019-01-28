@@ -1,13 +1,14 @@
 # pdf-thumbnail
 
-[![NPM version][npm-image]][npm-url] [![Downloads][downloads-image]][npm-url] [![Issues]][issues-url] [![Dependency Status][dependencies-image]][dependencies-url]
+[![NPM version][npm-image]][npm-url] [![Downloads][downloads-image]][npm-url] [![Issues][issues-image]][issues-url] [![Dependency Status][dependencies-image]][dependencies-url]
 
 [npm-url]: https://www.npmjs.com/package/pdf-thumbnail
 [npm-image]: http://img.shields.io/npm/v/pdf-thumbnail.svg?style=flat
 [downloads-image]: https://img.shields.io/npm/dm/pdf-thumbnail.svg?style=flat-square
 [dependencies-image]: https://david-dm.org/nicofuccella/pdf-thumbnail.svg
 [dependencies-url]: href="https://david-dm.org/nicofuccella/pdf-thumbnail
-[issues-url]: https://img.shields.io/github/issues/nicofuccella/pdf-thumbnail.svg
+[issues-image]: https://img.shields.io/github/issues/nicofuccella/pdf-thumbnail.svg
+[issues-url]: https://github.com/nicofuccella/pdf-thumbnail/issues
 
 ## Installation
 
