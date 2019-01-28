@@ -3,12 +3,9 @@
   "version": "1.0.6",
   "description": "pdf-thumbnail creates a thumbnail of the first page of a pdf file",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nicoFuccella/pdf-thumbnail.git"
+    "url": "git+https://github.com/nicofuccella/pdf-thumbnail.git"
   },
   "author": "Nicolò Fuccella",
   "contributors": [
@@ -23,15 +20,19 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/nicoFuccella/pdf-thumbnail/issues"
+    "url": "https://github.com/nicofuccella/pdf-thumbnail/issues"
   },
-  "homepage": "https://github.com/nicoFuccella/pdf-thumbnail#readme",
+  "homepage": "https://github.com/nicofuccella/pdf-thumbnail#readme",
   "devDependencies": {
     "@soluzioni-futura/eslint-config-soluzioni-futura": "^1.0.1",
-    "eslint": "^5.12.0"
+    "eslint": "^5.12.1"
   },
   "dependencies": {
     "gm": "^1.23.1",
     "promise.waterfall": "^3.2.0"
-  }
+  },
+  "keywords": [
+    "thumbnail", "pdf", "gm", "compress", "crop", "resize", "preview", "pdf2jpg", "viewer",
+    "screen capture", "document", "stream", "buffer", "thumbnails", "convert", "jpg"
+  ]
 }
