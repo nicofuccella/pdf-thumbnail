@@ -24,7 +24,7 @@
   },
   "homepage": "https://github.com/nicofuccella/pdf-thumbnail#readme",
   "devDependencies": {
-    "@soluzioni-futura/eslint-config-soluzioni-futura": "^1.0.1",
+    "@soluzioni-futura/eslint-config-soluzioni-futura": "^1.1.0",
     "eslint": "^5.12.1"
   },
   "dependencies": {
@@ -32,7 +32,21 @@
     "promise.waterfall": "^3.2.0"
   },
   "keywords": [
-    "thumbnail", "pdf", "gm", "compress", "crop", "resize", "preview", "pdf2jpg", "viewer",
-    "screen capture", "document", "stream", "buffer", "thumbnails", "convert", "jpg"
+    "thumbnail",
+    "pdf",
+    "gm",
+    "compress",
+    "crop",
+    "resize",
+    "preview",
+    "pdf2jpg",
+    "viewer",
+    "screen capture",
+    "document",
+    "stream",
+    "buffer",
+    "thumbnails",
+    "convert",
+    "jpg"
   ]
 }
